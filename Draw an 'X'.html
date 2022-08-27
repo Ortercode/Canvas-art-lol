@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ANIMATION</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            * {
+                font-family: Arial,Helvetica,Sans-Serif;
+                background: #333;
+                color: #fff;
+            }
+            
+            #canvasContainer {
+                overflow: hidden;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <header>
+            <h2>Draw an 'X'</h2>
+            <p>Orter</p>
+        </header>
+        <main>
+            <div id="canvasContainer">
+                <canvas id="canvas1" width="500" height="400"> canvasnot supported</canvas>
+            </div>
+        </main>
+        <script type="text/javascript">
+            const canvas1 = document.getElementById('canvas1');
+            
+            const context1 = canvas1.getContext('2d');
+            
+            context1.fillStyle = "#f6df12";
+            let c1Xpos = 30;
+            let c1Ypos = 40;
+        
+            
+            const contextOO = canvas1.getContext('2d');
+            
+            contextOO.fillStyle = '#76ffc3';
+            let c2Xpos = 300;
+            let c2Ypos = 40;
+            
+            
+            let i = 0;
+            
+            goFunc();
+            
+            let blueNRed = false;
+            
+            function goFunc() {
+                let myInt = setInterval(function() {
+                        ++i;
+                        ++c1Xpos;
+                        ++c1Ypos;
+                        
+                    
+                        
+                        --c2Xpos;
+                        ++c2Ypos;
+                        
+                    context1.fillStyle = "#fff545";
+                    //context1.lineCap = 'round';
+                    context1.fillRect(c1Xpos, c1Ypos, 50, 50);
+                    
+                    
+                    
+                        
+                    contextOO.fillStyle = '#45ff89';
+                    contextOO.lineCap = 'round';
+                    contextOO.fillRect(c2Xpos, c2Ypos, 50, 50);
+                    
+                        console.log(c1Xpos);
+                        if(i == 180) {
+                            
+                             setTimeout(function(){
+                            clearInterval(myInt);
+                                 i = 0;
+                                 reverseFunc();
+                                 c1Xpos += 1;
+                                 c1Ypos += 1;
+                                 c2Xpos -= 1;
+                                 c2Ypos += 1;
+                             },1000);
+                             
+                        }
+                    
+                
+                },10);
+                
+            }
+            
+            function reverseFunc() {
+                let myInt2 = setInterval(function() {
+                        ++i;
+                        --c1Xpos;
+                        --c1Ypos;
+                        
+                        ++c2Xpos;
+                        --c2Ypos;
+                        
+                    context1.fillStyle = "#fc4567";
+                    //context1.lineCap = 'round';
+                    context1.fillRect(c1Xpos, c1Ypos, 50, 50);
+                    contextOO.fillStyle = '#7899fc';
+                    contextOO.lineCap = 'round';
+                    contextOO.fillRect(c2Xpos, c2Ypos,50, 50);
+                        console.log(c1Xpos);
+                        if(i == 180) {
+                             setTimeout(function(){
+                                clearInterval(myInt2);
+                                 i = 0;
+                                 go2Func();
+                                 blueNRed = true;
+                                 c1Xpos -= 1;
+                                 c1Ypos -= 1;
+                                 c2Xpos += 1;
+                                 c2Ypos -= 1;
+                             },1000);
+                        }
+                },10);
+                
+            }
+            
+            function go2Func() {
+                let myInt3 = setInterval(function() {
+                        ++i;
+                        ++c1Xpos;
+                        ++c1Ypos;
+                        
+                        --c2Xpos;
+                        ++c2Ypos;
+                        
+                    context1.fillStyle = "#ffa943";
+                    //context1.lineCap = 'round';
+                    context1.fillRect(c1Xpos, c1Ypos, 50, 50);
+                    contextOO.fillStyle = '#9967c9';
+                    contextOO.lineCap = 'round';
+                    contextOO.fillRect(c2Xpos, c2Ypos,50, 50);
+                    
+                        console.log(c1Xpos);
+                        if(i == 180) {
+                             setTimeout(function(){
+                                clearInterval(myInt3);
+                                 i = 0;
+                                 go3Func();
+                                 blueNRed = false;
+                                 c1Xpos += 1;
+                                 c1Ypos += 1;
+                                 c2Xpos -= 1;
+                                 c2Ypos += 1;
+                             },1000);
+                        }
+                },10);
+                
+            }
+            function go3Func() {
+                let myInt3 = setInterval(function() {
+                        ++i;
+                        --c1Xpos;
+                        --c1Ypos;
+                        
+                        ++c2Xpos;
+                        --c2Ypos;
+                        
+                    context1.fillStyle = "#fff";
+                    //context1.lineCap = 'round';
+                    context1.fillRect(c1Xpos, c1Ypos, 50, 50);
+                    contextOO.fillStyle = '#555';
+                    contextOO.lineCap = 'round';
+                    contextOO.fillRect(c2Xpos, c2Ypos,50, 50);
+                    
+                        console.log(c1Xpos);
+                        if(i == 180) {
+                             setTimeout(function(){
+                                clearInterval(myInt3);
+                                 i = 0;
+                                 goFunc();
+                                 blueNRed = false;
+                                 c1Xpos -= 1;
+                                 c1Ypos -= 1;
+                                 c2Xpos += 1;
+                                 c2Ypos -= 1;
+                             },1000);
+                        }
+                },10);
+                
+            }
+            
+        </script>
+    </body>
+</html>
