@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Garden</title>
+        
+        <style>
+            * {
+                font-family: monospace, Sans-Serif;
+            }
+            #canvasContainer {
+                overflow:hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h2>The Tree</h2>
+            <p>Orter</p>
+            
+        </header>
+        <main>
+            <div id="canvasContainer">
+                <canvas id="canvas1" width="500" height="400">NOT SUPPORTED</canvas>
+                
+            </div>
+        </main>
+        
+        <script type="text/javascript">
+            
+            
+            const canvas1 = document.getElementById("canvas1");
+            
+            const contextBg = canvas1.getContext('2d');
+            
+            contextBg.fillStyle = '#b8dcff';
+            contextBg.fillRect(0, 0, 500, 400);
+            
+            
+            const sun = canvas1.getContext('2d');
+            
+            sun.fillStyle = '#ffefaa';
+            sun.fillRect(20, 30, 50, 50);
+            
+            const sunInner = canvas1.getContext('2d');
+            
+            sunInner.fillStyle = '#ffffa6';
+            sunInner.fillRect(30, 40, 30, 30);
+            
+            const sunInnerWhite = canvas1.getContext('2d');
+            
+            sunInnerWhite.fillStyle = '#ffffff';
+            sunInnerWhite.fillRect(50, 40, 10, 10);
+            
+            const context2 = canvas1.getContext('2d');
+            context2.fillStyle = '#c22455';
+            //context2.fillStyle = '#ff0000';
+            
+            const grass = canvas1.getContext('2d');
+            
+            grass.fillStyle  = "#a5d797";
+            grass.fillRect(-30, 300, 500, 150);
+            
+          /*  const Darkgrass = canvas1.getContext('2d');
+            
+            Darkgrass.fillStyle  = "#a5d797";
+            Darkgrass.fillRect(-30, 300, 500, 150);*/
+            
+            
+          //  context2.fillText("Hello", 100, 100);
+            
+            // Drawing a tree
+            
+            const treeMain = canvas1.getContext('2d');
+            
+            treeMain.fillStyle  = "#97564d";
+            treeMain.fillRect(180, 180, 15, 150);
+            
+            
+            
+            // These are the leaves - Small
+            //Rectangles && Squares couloured
+            
+            const context25 = canvas1.getContext('2d');
+            context25.fillStyle = "#6cad88";
+            context25.fillRect(148, 99, 26, 30);
+            
+            const context24 = canvas1.getContext('2d');
+            context24.fillStyle = "#76b68a";
+            context24.fillRect(175, 95, 45, 34);
+            
+            const context23 = canvas1.getContext('2d');
+            context23.fillStyle = "#67a889";
+            context23.fillRect(129, 129, 45, 34);
+            
+            const context22 = canvas1.getContext('2d');
+            context22.fillStyle = "#8ac479";
+            context22.fillRect(140, 110, 45, 34);
+            
+            const context21 = canvas1.getContext('2d');
+            context21.fillStyle = "#85ce92";
+            context21.fillRect(160, 105, 45, 34);
+            
+            const context19 = canvas1.getContext('2d');
+            context19.fillStyle = "#89c478";
+            context19.fillRect(187, 125, 45, 34);
+            
+            const context20 = canvas1.getContext('2d');
+            context20.fillStyle = "#73a27c";
+            context20.fillRect(180, 135, 45, 34);
+            
+            const context18 = canvas1.getContext('2d');
+            context18.fillStyle = "#77c698";
+            context18.fillRect(150, 125, 45, 34);
+            
+            const context17 = canvas1.getContext('2d');
+            context17.fillStyle = "#8cb486";
+            context17.fillRect(165, 120, 45, 34);
+            
+            
+            const context16 = canvas1.getContext('2d');
+            context16.fillStyle = "#77a689";
+            context16.fillRect(180, 147, 45, 34);
+            
+            
+            const context15 = canvas1.getContext('2d');
+            context15.fillStyle = "#89c898";
+            context15.fillRect(137, 147, 35, 34);
+            
+            const context4 = canvas1.getContext('2d');
+            context4.fillStyle = "#78c889";
+            context4.fillRect(170, 180, 15, 20);
+            
+            
+            const context5 = canvas1.getContext('2d');
+            context5.fillStyle = "#9fc889";
+            context5.fillRect(190, 180, 15, 20);
+            
+            
+            const context6 = canvas1.getContext('2d');
+            context6.fillStyle = "#98b668";
+            context6.fillRect(195, 170, 15, 20);
+            
+            const context7 = canvas1.getContext('2d');
+            context7.fillStyle = "#63b679";
+            context7.fillRect(165, 170, 15, 20);
+            
+            const context8 = canvas1.getContext('2d');
+            context8.fillStyle = "#99c59a";
+            context8.fillRect(175, 170, 15, 20);
+            
+            
+            const context9 = canvas1.getContext('2d');
+            context9.fillStyle = "#98cc74";
+            context9.fillRect(179, 167, 15, 20);
+            
+            const context10 = canvas1.getContext('2d');
+            context10.fillStyle = "#98cca6";
+            context10.fillRect(155, 156, 18, 25);
+            
+            const context11 = canvas1.getContext('2d');
+            context11.fillStyle = "#63b679";
+            context11.fillRect(164, 150, 18, 25);
+            
+            
+            const context12 = canvas1.getContext('2d');
+            context12.fillStyle = "#acd997";
+            context12.fillRect(164, 150, 18, 25);
+            
+            const context13 = canvas1.getContext('2d');
+            context13.fillStyle = "#78c889";
+            context13.fillRect(170, 130, 15, 24);
+            
+            const context14 = canvas1.getContext('2d');
+            context14.fillStyle = "#a5ce76";
+            context14.fillRect(185, 137, 15, 24);
+            
+            
+            
+            // FUNCTIONS 
+            
+            function changeColour(){
+                    
+                contextBg.fillStyle = '#324267';
+                contextBg.fillRect(0, 0, 500, 400);
+                
+                
+                sun.fillStyle = '#fdfdfc';
+                sun.fillRect(20, 30, 50, 50);
+                
+                
+                sunInner.fillStyle = '#eee';
+                sunInner.fillRect(30, 40, 30, 30);
+                
+                
+                sunInnerWhite.fillStyle = '#fff';
+                sunInnerWhite.fillRect(50, 40, 10, 10);
+                
+                context2.fillStyle = '#c22455';
+                
+                
+                grass.fillStyle  = "#769986";
+                grass.fillRect(-30, 300, 500, 150);
+                
+              /*  const Darkgrass = canvas1.getContext('2d');
+                
+                Darkgrass.fillStyle  = "#a5d797";
+                Darkgrass.fillRect(-30, 300, 500, 150);*/
+                
+                
+              //  context2.fillText("Hello", 100, 100);
+                
+                // Drawing a tree
+                
+                
+                treeMain.fillStyle  = "#66564a";
+                treeMain.fillRect(180, 180, 15, 150);
+                
+                
+                // Leaves
+                
+                    
+                context25.fillStyle = "#587e71";
+                context25.fillRect(148, 99, 26, 30);
+            
+            
+                context24.fillStyle = "#456772";
+                context24.fillRect(175, 95, 45, 34);
+            
+                context23.fillStyle = "#456761";
+                context23.fillRect(129, 129, 45, 34);
+            
+                context22.fillStyle = "#8ac479";
+                context22.fillRect(140, 110, 45, 34);
+            
+                context21.fillStyle = "#85ce92";
+                context21.fillRect(160, 105, 45, 34);
+            
+            
+                context19.fillStyle = "#89c478";
+                context19.fillRect(187, 125, 45, 34);
+            
+                
+                context20.fillStyle = "#73a27c";
+                context20.fillRect(180, 135, 45, 34);
+                
+                context18.fillStyle = "#77c698";
+                context18.fillRect(150, 125, 45, 34);
+                
+                context17.fillStyle = "#8cb486";
+                context17.fillRect(165, 120, 45, 34);
+                
+                
+                context16.fillStyle = "#77a689";
+                context16.fillRect(180, 147, 45, 34);
+                
+                
+                context15.fillStyle = "#365";
+                context15.fillRect(137, 147, 35, 34);
+                
+                context4.fillStyle = "#78c889";
+                context4.fillRect(170, 180, 15, 20);
+                
+                
+                context5.fillStyle = "#9fc889";
+                context5.fillRect(190, 180, 15, 20);
+                
+                
+                context6.fillStyle = "#98b668";
+                context6.fillRect(195, 170, 15, 20);
+                
+                context7.fillStyle = "#63b679";
+                context7.fillRect(165, 170, 15, 20);
+                
+                context8.fillStyle = "#99c59a";
+                context8.fillRect(175, 170, 15, 20);
+                
+            
+                context9.fillStyle = "#98cc74";
+                context9.fillRect(179, 167, 15, 20);
+                
+                context10.fillStyle = "#98cca6";
+                context10.fillRect(155, 156, 18, 25);
+                
+                context11.fillStyle = "#63b679";
+                context11.fillRect(164, 150, 18, 25);
+                
+                
+                context12.fillStyle = "#acd997";
+                context12.fillRect(164, 150, 18, 25);
+                
+                context13.fillStyle = "#78c889";
+                context13.fillRect(170, 130, 15, 24);
+                
+                context14.fillStyle = "#a5ce76";
+                context14.fillRect(185, 137, 15, 24);
+                
+            }
+            
+            
+            // blinkyBlink
+            function blinkyBlink() { 
+                
+                context25.fillStyle = "#587e71";
+                context25.fillRect(148, 99, 26, 30);
+            
+            
+                context24.fillStyle = "#456772";
+                context24.fillRect(175, 95, 45, 34);
+            
+                context23.fillStyle = "#456761";
+                context23.fillRect(129, 129, 45, 34);
+            
+                context22.fillStyle = "#8ac479";
+                context22.fillRect(140, 110, 45, 34);
+            
+                context21.fillStyle = "#85ce92";
+                context21.fillRect(160, 105, 45, 34);
+            
+            
+                context19.fillStyle = "#89c478";
+                context19.fillRect(187, 125, 45, 34);
+            
+                
+                context20.fillStyle = "#73a27c";
+                context20.fillRect(180, 135, 45, 34);
+                
+                context18.fillStyle = "#77c698";
+                context18.fillRect(150, 125, 45, 34);
+                
+                context17.fillStyle = "#8cb486";
+                context17.fillRect(165, 120, 45, 34);
+                
+                
+                context16.fillStyle = "#77a689";
+                context16.fillRect(180, 147, 45, 34);
+                
+                
+                context15.fillStyle = "#365";
+                context15.fillRect(137, 147, 35, 34);
+                
+                context4.fillStyle = "#78c889";
+                context4.fillRect(170, 180, 15, 20);
+                
+                
+                context5.fillStyle = "#9fc889";
+                context5.fillRect(190, 180, 15, 20);
+                
+                
+                context6.fillStyle = "#98b668";
+                context6.fillRect(195, 170, 15, 20);
+                
+                context7.fillStyle = "#63b679";
+                context7.fillRect(165, 170, 15, 20);
+                
+                context8.fillStyle = "#99c59a";
+                context8.fillRect(175, 170, 15, 20);
+                
+            
+                context9.fillStyle = "#98cc74";
+                context9.fillRect(179, 167, 15, 20);
+                
+                context10.fillStyle = "#98cca6";
+                context10.fillRect(155, 156, 18, 25);
+                
+                context11.fillStyle = "#63b679";
+                context11.fillRect(164, 150, 18, 25);
+                
+                
+                context12.fillStyle = "#acd997";
+                context12.fillRect(164, 150, 18, 25);
+                
+                context13.fillStyle = "#fcf432";
+                context13.fillRect(170, 130, 15, 24);
+                
+                context14.fillStyle = "#a5ce76";
+                context14.fillRect(185, 137, 15, 24);
+                
+            }
+            
+            
+            
+            
+            
+            
+            
+            
+            // blinkyBlink
+            function resetBlink() { 
+                
+                context25.fillStyle = "#587e71";
+                context25.fillRect(148, 99, 26, 30);
+            
+            
+                context24.fillStyle = "#456772";
+                context24.fillRect(175, 95, 45, 34);
+            
+                context23.fillStyle = "#456761";
+                context23.fillRect(129, 129, 45, 34);
+            
+                context22.fillStyle = "#8ac479";
+                context22.fillRect(140, 110, 45, 34);
+            
+                context21.fillStyle = "#85ce92";
+                context21.fillRect(160, 105, 45, 34);
+            
+            
+                context19.fillStyle = "#89c478";
+                context19.fillRect(187, 125, 45, 34);
+            
+                
+                context20.fillStyle = "#73a27c";
+                context20.fillRect(180, 135, 45, 34);
+                
+                context18.fillStyle = "#77c698";
+                context18.fillRect(150, 125, 45, 34);
+                
+                context17.fillStyle = "#8cb486";
+                context17.fillRect(165, 120, 45, 34);
+                
+                
+                context16.fillStyle = "#77a689";
+                context16.fillRect(180, 147, 45, 34);
+                
+                
+                context15.fillStyle = "#365";
+                context15.fillRect(137, 147, 35, 34);
+                
+                context4.fillStyle = "#78c889";
+                context4.fillRect(170, 180, 15, 20);
+                
+                
+                context5.fillStyle = "#9fc889";
+                context5.fillRect(190, 180, 15, 20);
+                
+                
+                context6.fillStyle = "#98b668";
+                context6.fillRect(195, 170, 15, 20);
+                
+                context7.fillStyle = "#63b679";
+                context7.fillRect(165, 170, 15, 20);
+                
+                context8.fillStyle = "#99c59a";
+                context8.fillRect(175, 170, 15, 20);
+                
+            
+                context9.fillStyle = "#98cc74";
+                context9.fillRect(179, 167, 15, 20);
+                
+                context10.fillStyle = "#98cca6";
+                context10.fillRect(155, 156, 18, 25);
+                
+                context11.fillStyle = "#63b679";
+                context11.fillRect(164, 150, 18, 25);
+                
+                
+                context12.fillStyle = "#acd997";
+                context12.fillRect(164, 150, 18, 25);
+                
+                context13.fillStyle = "red";
+                context13.fillRect(170, 130, 15, 24);
+                
+                context14.fillStyle = "#a5ce76";
+                context14.fillRect(185, 137, 15, 24);
+                
+            }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            // RESET !
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            function reset(){
+                    
+                contextBg.fillStyle = '#b8dcff';
+                contextBg.fillRect(0, 0, 500, 400);
+                
+                
+                sun.fillStyle = '#ffefaa';
+                sun.fillRect(20, 30, 50, 50);
+                
+                
+                sunInner.fillStyle = '#ffffa6';
+                sunInner.fillRect(30, 40, 30, 30);
+                
+                
+                sunInnerWhite.fillStyle = '#ffffff';
+                sunInnerWhite.fillRect(50, 40, 10, 10);
+                
+                context2.fillStyle = '#c22455';
+                
+                
+                grass.fillStyle  = "#a5d797";
+                grass.fillRect(-30, 300, 500, 150);
+                
+              /*  const Darkgrass = canvas1.getContext('2d');
+                
+                Darkgrass.fillStyle  = "#a5d797";
+                Darkgrass.fillRect(-30, 300, 500, 150);*/
+                
+                
+              //  context2.fillText("Hello", 100, 100);
+                
+                // Drawing a tree
+                
+                
+                treeMain.fillStyle  = "#97564d";
+                treeMain.fillRect(180, 180, 15, 150);
+                
+                
+                    
+                context25.fillStyle = "#6cad88";
+                context25.fillRect(148, 99, 26, 30);
+            
+            
+                context24.fillStyle = "#76b68a";
+                context24.fillRect(175, 95, 45, 34);
+            
+                context23.fillStyle = "#67a889";
+                context23.fillRect(129, 129, 45, 34);
+            
+                context22.fillStyle = "#8ac479";
+                context22.fillRect(140, 110, 45, 34);
+            
+                context21.fillStyle = "#85ce92";
+                context21.fillRect(160, 105, 45, 34);
+            
+            
+                context19.fillStyle = "#89c478";
+                context19.fillRect(187, 125, 45, 34);
+            
+                
+                context20.fillStyle = "#73a27c";
+                context20.fillRect(180, 135, 45, 34);
+                
+                context18.fillStyle = "#77c698";
+                context18.fillRect(150, 125, 45, 34);
+                
+                context17.fillStyle = "#8cb486";
+                context17.fillRect(165, 120, 45, 34);
+                
+                
+                context16.fillStyle = "#77a689";
+                context16.fillRect(180, 147, 45, 34);
+                
+                
+                context15.fillStyle = "#89c898";
+                context15.fillRect(137, 147, 35, 34);
+                
+                context4.fillStyle = "#78c889";
+                context4.fillRect(170, 180, 15, 20);
+                
+                
+                context5.fillStyle = "#9fc889";
+                context5.fillRect(190, 180, 15, 20);
+                
+                
+                context6.fillStyle = "#98b668";
+                context6.fillRect(195, 170, 15, 20);
+                
+                context7.fillStyle = "#63b679";
+                context7.fillRect(165, 170, 15, 20);
+                
+                context8.fillStyle = "#99c59a";
+                context8.fillRect(175, 170, 15, 20);
+                
+            
+                context9.fillStyle = "#98cc74";
+                context9.fillRect(179, 167, 15, 20);
+                
+                context10.fillStyle = "#98cca6";
+                context10.fillRect(155, 156, 18, 25);
+                
+                context11.fillStyle = "#63b679";
+                context11.fillRect(164, 150, 18, 25);
+                
+                
+                context12.fillStyle = "#acd997";
+                context12.fillRect(164, 150, 18, 25);
+                
+                context13.fillStyle = "#78c889";
+                context13.fillRect(170, 130, 15, 24);
+                
+                context14.fillStyle = "#a5ce76";
+                context14.fillRect(185, 137, 15, 24);
+                
+            }
+            // EFFECTS 
+            
+            // Every other second it changes
+            // to other colours
+            
+            let time = 0;
+            let time2 = 0;
+            
+            let myInt = setInterval(function() {
+                time++;
+                console.log(time);
+                
+                function checkTime() {
+                    
+                    if((time == 2)) {
+                        changeColour();
+                        console.log('tress');
+                        
+                        
+                        
+                        
+                        // BLINK INTERVALS
+                        
+                        let myInt2 = setInterval(function() {
+                            time2++;
+                            
+                            if(time == 2) {
+                                blinkyBlink();
+                            }
+                            
+                            setTimeout(function(){
+                                time2 = 0;
+                                resetBlink();
+                                
+                                setTimeout(function() {
+                                reset();
+                                },1000);
+                            },250);
+                            
+                        },125);
+                        
+                        
+                        setTimeout(() => {
+                            reset();
+                            time = 0;
+                            
+                            clearInterval(myInt2);
+                        },2000);
+                    } 
+                }
+                
+                checkTime();
+            },1000);
+        </script>
+    </body>
+</html>
